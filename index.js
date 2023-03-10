@@ -93,6 +93,9 @@ async function addEventButtons(list, btnEdit, btnDelete) {
         })
       }
 
+      // Direcionando scroll para o topo
+      window.scrollTo(0, 0);
+
       formModeEdit(list, form, response.id)
     })
   })
@@ -119,7 +122,7 @@ async function formModeEdit(list, form, schoolerId) {
       form.classList.add('was-validated')
       return
     }
-    
+
     var scholler = await getObjectScholler(form)
     scholler.id = btnEdit.dataset.identifier
     
